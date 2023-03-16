@@ -8,7 +8,7 @@ from fastai.basics import *
 
 # Cell
 from .data import *
-from .models.inception_time import *
+from .models.InceptionTime import *
 
 # Cell
 from fastai.vision.data import get_grid
