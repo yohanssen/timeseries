@@ -273,7 +273,7 @@ def ts_learner(dls, model=None, opt_func=Ranger, loss_func=None, cbs=None, metri
     n_in = get_n_channels(dls.train) # data.n_channels
     n_out= dls.c # Number of classes
 
-    if model is None: model = inception_time(n_in, n_out).to(device=default_device())
+    if model is None: model = InceptionTime(n_in, n_out).to(device=default_device())
     if opt_func is None: opt_func = Ranger
     if loss_func is None: loss_func = LabelSmoothingCrossEntropy()
     if cbs is None: cbs = L(cbs)
